@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 136px;
+    margin-left: auto;
+    margin-right: auto;
+    @include screen-xl {padding: 0 60px;}
+    @include screen-md {padding: 0 24px;}
+    @include screen-sm {padding: 0 16px;}
+}

@@ -1,0 +1,89 @@
+// Defined screen size
+$screen-xxs: 380px;
+$screen-xs: 480px;
+$screen-sm: 576px;
+$screen-mhd: 672px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xhl: 1080px;
+$screen-xl: 1280px;
+$screen-xxl: 1480px;
+$screen-xxxl: 1680px;
+$screen-fhd: 1920px;
+$screen-2k: 2560px;
+
+// max-width
+// max-width: 380px
+@mixin screen-xxs { @media only screen and (max-width: #{$screen-xxs}) { @content; } }
+// max-width: 480px
+@mixin screen-xs { @media only screen and (max-width: #{$screen-xs}) { @content; } }
+// max-width: 576px
+@mixin screen-sm { @media only screen and (max-width: #{$screen-sm}) { @content; } }
+// max-width: 672px
+@mixin screen-mhd { @media only screen and (max-width: #{$screen-mhd}) { @content; } }
+// max-width: 768px
+@mixin screen-md { @media only screen and (max-width: #{$screen-md}) { @content; } }
+// max-width: 992px
+@mixin screen-lg { @media only screen and (max-width: #{$screen-lg}) { @content; } }
+// max-width: 1080px
+@mixin screen-xhl { @media only screen and (max-width: #{$screen-xhl}) { @content; } }
+// max-width: 1280px
+@mixin screen-xl { @media only screen and (max-width: #{$screen-xl}) { @content; } }
+// max-width: 1480px
+@mixin screen-xxl { @media only screen and (max-width: #{$screen-xxl}) { @content; } }
+// max-width: 1680px
+@mixin screen-xxxl { @media only screen and (max-width: #{$screen-xxxl}) { @content; } }
+// max-width: 1920px
+@mixin screen-fhd { @media only screen and (max-width: #{$screen-fhd}) { @content; } }
+// max-width: 2560px
+@mixin screen-2k { @media only screen and (max-width: #{$screen-2k}) { @content; } }
+
+// min-width
+// min-width: 2560px
+@mixin screen-min-2k { @media only screen and (min-width: #{$screen-2k}) { @content; } }
+// min-width: 1920px
+@mixin screen-min-fhd { @media only screen and (min-width: #{$screen-fhd}) { @content; } }
+// min-width: 1680px
+@mixin screen-min-xxxl { @media only screen and (min-width: #{$screen-xxxl}) { @content; } }
+// min-width: 1480px
+@mixin screen-min-xxl { @media only screen and (min-width: #{$screen-xxl}) { @content; } }
+// min-width: 1280px
+@mixin screen-min-xl { @media only screen and (min-width: #{$screen-xl}) { @content; } }
+// min-width: 1080px
+@mixin screen-min-xhl { @media only screen and (min-width: #{$screen-xhl}) { @content; } }
+// min-width: 992px
+@mixin screen-min-lg { @media only screen and (min-width: #{$screen-lg}) { @content; } }
+// min-width: 768px
+@mixin screen-min-md { @media only screen and (min-width: #{$screen-md}) { @content; } }
+// min-width: 672px
+@mixin screen-min-mhd { @media only screen and (min-width: #{$screen-mhd}) { @content; } }
+// min-width: 576px
+@mixin screen-min-sm { @media only screen and (min-width: #{$screen-sm}) { @content; } }
+// min-width: 480px
+@mixin screen-min-xs { @media only screen and (min-width: #{$screen-xs}) { @content; } }
+// min-width: 380px
+@mixin screen-min-xxs { @media only screen and (min-width: #{$screen-xxs}) { @content; } }
+
+// Font
+// @include font (16px, 1.5, 500, normal);
+@mixin font($font-size, $line-height: normal, $font-weight: normal, $letter-spacing: normal) {
+	font-size: $font-size;
+	// line-height
+	@if $line-height==normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height;
+	}
+	// font-weight
+	@if $font-weight==normal {
+		font-weight: normal;
+	} @else {
+		font-weight: $font-weight;
+	}
+	// letter-spacing
+	@if $letter-spacing==normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: $letter-spacing;
+	}
+}

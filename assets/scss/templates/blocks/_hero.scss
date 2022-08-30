@@ -1,0 +1,174 @@
+.hero {
+    position: relative;
+    padding: 120px 0 154px;
+    @include screen-lg {
+        padding: 100px 0 120px;
+    }
+    @include screen-md {
+        padding: 80px 0 100px;
+    }
+    @include screen-sm {
+        padding: 60px 0 80px;
+    }
+
+    &__wrap {
+        position: relative;
+        display: grid;
+        grid-template-columns: .8fr 2fr;
+        gap: 32px;
+
+        @include screen-lg {
+            grid-template-columns: 1fr;
+            gap: 40pxpx;
+        }
+    }
+
+    &__sticky {
+       position: sticky;
+       top: 60px;
+       height: min-content;
+
+       @include screen-lg {
+        position: relative;
+        top: inherit;
+       }
+    }
+
+    &__sticky-title {
+        padding: 24px 0 32px;
+        @include screen-lg {
+            padding: 0 0 24px; 
+        }
+    }
+
+    &__cases {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 56px;
+
+        @include screen-lg {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__case {
+        transition: all ease .5s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        padding: 64px 16px;
+        border-top: 1px solid $grey;
+        border-left: 1px solid $grey;
+
+        @include screen-md {
+            padding: 40px 16px;
+        }
+        @include screen-sm {
+            padding: 32px 16px;
+        }
+
+        &:nth-child(-n + 2) {
+            border-top: none;
+            padding-top: 36px;
+            @include screen-md {
+                padding-top: 24px;
+            }
+        }
+        &:nth-child(n + 3) {
+            padding-bottom: 36px;
+            @include screen-md {
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &__case-name {
+        text-align: center;
+        color: $text2;
+    }
+    &__case-number {
+        color: $text;
+    }
+
+    &__item {
+        $self: &;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: .8fr 1.9fr 4fr;
+        gap: 32px;
+        padding: 32px 0;
+        border-bottom: 1px solid $grey;
+
+        @include screen-lg {
+            grid-template-columns: .4fr 1.5fr 4fr;
+        }
+        @include screen-md {
+            gap: 24px;
+            padding: 24px 0;
+        }
+        @include screen-sm {
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        > p,
+        > span {
+            line-height: 2;
+        }
+
+        &:hover {
+            #{ $self }-count,
+            #{ $self }-title {
+                color: $red;
+            }
+        }
+
+        &.active {
+            #{ $self }-description {
+                display: block;
+            }
+            #{ $self }-count,
+            #{ $self }-title {
+                color: $red;
+            }
+        }
+    }
+    &__item-content {
+        overflow: hidden;
+        @include screen-sm {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+
+    &__item-count,
+    &__item-title {
+        transition: all ease .5s;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+    }
+
+    &__item-text {
+        line-height: 1.5;
+    }
+
+    &__item-description {
+        animation: fadeIn ease .75s;
+        display: none;
+        padding-top: 26px;
+        line-height: 2;
+        @include screen-md {
+            padding-top: 20px;
+        }
+        @include screen-md {
+            padding-top: 16px;
+        }
+    }
+
+}

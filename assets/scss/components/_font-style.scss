@@ -1,0 +1,108 @@
+.h0 {
+    @include font (48px, 1.17, 800, normal);
+    @include screen-xl {@include font (40px, 1.17, 800, normal);}
+    @include screen-lg {@include font (36px, 1.17, 800, normal);}
+    @include screen-md {@include font (32px, 1.17, 800, normal);}
+    @include screen-sm {@include font (28px, 1.17, 800, normal);}
+}
+
+h1, .h1 {
+    @include font (40px, 1.12, 800, normal);
+    @include screen-xl {@include font (36px, 1.12, 800, normal);}
+    @include screen-lg {@include font (32px, 1.12, 800, normal);}
+    @include screen-md {@include font (28px, 1.12, 800, normal);}
+    @include screen-sm {@include font (24px, 1.12, 800, normal);}
+}
+
+// h2, .h2 {
+//     @include font (50px, 1, bold, normal);
+//     @include screen-xl {@include font (42px, 1.2, bold, normal);}
+//     @include screen-lg {@include font (38px, 1.25, bold, normal);}
+//     @include screen-md {@include font (34px, 1.33, bold, normal);}
+//     @include screen-sm {@include font (30px, 1.33, bold, normal);}
+// }
+
+// h3, .h3 {
+//     @include font (42px, 1.1, bold, normal);
+//     @include screen-xl {@include font (40px, 1.2, bold, normal);}
+//     @include screen-lg {@include font (36px, 1.25, bold, normal);}
+//     @include screen-md {@include font (32px, 1.33, bold, normal);}
+//     @include screen-sm {@include font (28px, 1.33, bold, normal);}
+// }
+
+// h4, .h4 {
+//     @include font (36px, 1.2, bold, normal);
+//     @include screen-xl {@include font (34px, 1.2, bold, normal);}
+//     @include screen-lg {@include font (30px, 1.2, bold, normal);}
+//     @include screen-md {@include font (28px, 1.2, bold, normal);}
+//     @include screen-sm {@include font (25px, 1.2, bold, normal);}
+// }
+
+// h5, .h5 {
+//     @include font (28px, 1.33, bold, normal);
+//     @include screen-lg {@include font (26px, 1.33, bold, normal);}
+//     @include screen-md {@include font (24px, 1.33, bold, normal);}
+//     @include screen-sm {@include font (20px, 1.33, bold, normal);}
+// }
+
+// h6, .h6 {
+//     @include font (20px, 1.33, bold, normal);
+//     @include screen-md {@include font (18px, 1.5, bold, normal);}
+//     @include screen-sm {@include font (16px, 1.5, bold, normal);}
+// }
+
+p {
+    @include font (18px, 1.5, normal, normal);
+    @include screen-md {@include font (16px, 1.5, normal, normal);}
+    @include screen-sm {@include font (14px, 1.5, normal, normal);}
+}
+
+// a, button {
+    // @include font (20px, 1.33, normal, normal);
+    // @include screen-xl {@include font (22px, 1.33, normal, normal);}
+    // @include screen-lg {@include font (20px, 1.33, normal, normal);}
+    // @include screen-md {@include font (18px, 1.5, normal, normal);}
+    // @include screen-sm {@include font (16px, 1.5, normal, normal);}
+// }
+
+// li {
+    // @include font (20px, 1.33, normal, normal);
+    // @include screen-xl {@include font (22px, 1.33, normal, normal);}
+    // @include screen-lg {@include font (20px, 1.33, normal, normal);}
+    // @include screen-md {@include font (18px, 1.5, normal, normal);}
+    // @include screen-sm {@include font (16px, 1.5, normal, normal);}
+// }
+
+b, .bold {
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.primary {
+    @include font (14px, 1.5, 700, 0.06em);
+    @include screen-sm {@include font (12px, 1.5, 700, 0.06em);}
+}
+
+.text {
+    &-l {
+        @include font (24px, 1.5, normal, normal);
+        @include screen-xl {@include font (22px, 1.5, normal, normal);}
+        @include screen-lg {@include font (20px, 1.5, normal, normal);}
+        @include screen-md {@include font (18px, 1.5, normal, normal);}
+        @include screen-sm {@include font (16px, 1.5, normal, normal);}
+    }
+    // &-m {
+        // @include font (20px, 1.5, normal, normal);
+        // @include screen-lg {@include font (18px, 1.5, normal, normal);}
+        // @include screen-md {@include font (16px, 1.5, normal, normal);}
+        // @include screen-sm {@include font (14px, 1.5, normal, normal);}
+    // }
+    &-s {
+        @include font (16px, 1.33, normal, normal);
+        @include screen-lg {@include font (14px, 1.5, normal, normal);}
+        @include screen-sm {@include font (12px, 1.5, normal, normal);}
+    }
+}

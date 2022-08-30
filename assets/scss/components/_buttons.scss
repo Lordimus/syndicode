@@ -1,0 +1,16 @@
+.primary {
+    outline: none;
+    cursor: pointer;
+    transition: all ease .5s;
+    padding: 10px 32px;
+    width: fit-content;
+    min-width: 208px;
+    background-color: $red;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+
+    &:hover {
+        background-color: $bg;
+    }
+}
